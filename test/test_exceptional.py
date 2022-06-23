@@ -18,6 +18,6 @@ class ExceptionalTest(unittest.TestCase):
             obj=Purchase.obtain_purchase_with_amount("101abc,2-3-2021,venu,bat,500.00,4,ball,200,2,guard,200.00,2,helmet,1500.00,4,vickets,1500.00,2")
             test_obj.yakshaAssert("TestValueError", False, "exception")
             print("TestValueError = Failed")
-        except InvalidWholeSaleError as e:
+        except ValueError as e:
             test_obj.yakshaAssert("TestValueError", True, "exception")
             print("TestValueError = Passed")
